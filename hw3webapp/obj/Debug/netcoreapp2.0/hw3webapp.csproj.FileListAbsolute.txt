@@ -1,0 +1,11 @@
+/Users/lukassestic/Desktop/raupjc3/hw3webapp/hw3webapp/bin/Debug/netcoreapp2.0/hw3webapp.deps.json
+/Users/lukassestic/Desktop/raupjc3/hw3webapp/hw3webapp/bin/Debug/netcoreapp2.0/hw3webapp.runtimeconfig.json
+/Users/lukassestic/Desktop/raupjc3/hw3webapp/hw3webapp/bin/Debug/netcoreapp2.0/hw3webapp.runtimeconfig.dev.json
+/Users/lukassestic/Desktop/raupjc3/hw3webapp/hw3webapp/bin/Debug/netcoreapp2.0/hw3webapp.dll
+/Users/lukassestic/Desktop/raupjc3/hw3webapp/hw3webapp/bin/Debug/netcoreapp2.0/hw3webapp.pdb
+/Users/lukassestic/Desktop/raupjc3/hw3webapp/hw3webapp/obj/Debug/netcoreapp2.0/hw3webapp.csproj.CoreCompileInputs.cache
+/Users/lukassestic/Desktop/raupjc3/hw3webapp/hw3webapp/obj/Debug/netcoreapp2.0/hw3webapp.AssemblyInfoInputs.cache
+/Users/lukassestic/Desktop/raupjc3/hw3webapp/hw3webapp/obj/Debug/netcoreapp2.0/hw3webapp.AssemblyInfo.cs
+/Users/lukassestic/Desktop/raupjc3/hw3webapp/hw3webapp/obj/Debug/netcoreapp2.0/hw3webapp.dll
+/Users/lukassestic/Desktop/raupjc3/hw3webapp/hw3webapp/obj/Debug/netcoreapp2.0/hw3webapp.pdb
+/Users/lukassestic/Desktop/raupjc3/hw3webapp/hw3webapp/obj/Debug/netcoreapp2.0/hw3webapp.csprojResolveAssemblyReference.cache
