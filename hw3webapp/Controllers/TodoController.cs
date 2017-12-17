@@ -158,11 +158,23 @@ namespace hw3webapp.Controllers
         public async Task<IActionResult> MarkAsComplete(Guid? id)
         {
             var todoItem = await _context.TodoItems.SingleAsync(m => m.Id == id);
-            todoItem.DateCompleted = DateTime.Now;
+            if (!todoItem.IsCompleted)
+            {
+                todoItem.DateCompleted = DateTime.Now;
+            }
+            else
+            {
+                todoItem.DateCompleted = null;
+            }
             _context.TodoItems.Update(todoItem);
             await _context.SaveChangesAsync();
             
             return RedirectToAction(nameof(Index));
+        }
+        
+        public async Task<IActionResult> SeeCompleted()
+        {
+            return View(await _context.TodoItems.ToListAsync());
         }
     }
 }

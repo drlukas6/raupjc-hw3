@@ -1,0 +1,43 @@
+@using hw3webapp
+@model TodoItem
+
+@functions
+{
+
+    string daysLeft(DateTime dateStart,DateTime? dateDue)
+    {
+        DateTime dateDueUnpacked = dateDue.GetValueOrDefault();
+        if (dateDueUnpacked != null && dateDueUnpacked != default(DateTime))
+        {
+            return "(Za " + dateDueUnpacked.Subtract(dateStart).TotalDays.ToString() + " dana!)";
+        }
+        return "";
+    }
+    
+}
+
+@{
+    string timeLeftIcon = "glyphicon glyphicon-time";
+    string color = "red";
+    string left = daysLeft(Model.DateCreated, Model.DateDue);
+    string completeIcon = "glyphicon glyphicon-check text-primary";
+    string completeText = "Mark As Complete";
+
+    if (Model.IsCompleted)
+    {
+        color = "green";
+        timeLeftIcon = "glyphicon glyphicon-ok";
+        left = "";
+        completeIcon = "glyphicon glyphicon-remove";
+        completeText = "Remove From Completed";
+    }
+    
+    
+}
+
+<div>
+    <h5>@Model.Text <span style="color: @color" ><span class="@timeLeftIcon"></span>@left</span></h5> 
+    <h6>@Model.DateCreated.Date.ToString("D")</h6>
+    <span class="@completeIcon " ></span><a asp-action="MarkAsComplete" asp-route-id="@Model.Id">@completeText</a><br/><br/>
+</div>
+

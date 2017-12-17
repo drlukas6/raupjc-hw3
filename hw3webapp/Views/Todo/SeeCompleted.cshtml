@@ -1,4 +1,4 @@
-@model IEnumerable<hw3webapp.TodoItem>
+﻿@model IEnumerable<hw3webapp.TodoItem>
 
 @{
     ViewData["Title"] = "All Your Todos";
@@ -28,13 +28,12 @@
 <span class="bg-inverse text-white"><h2>All Your Todos</h2></span>
 
 
-<a class="btn btn-primary" asp-action="Create"><span class="glyphicon glyphicon-plus"></span> Create New</a> &nbsp;&nbsp;
-<a class="btn btn-success" asp-action="SeeCompleted"><span class="glyphicon glyphicon-ok"></span> View Completed</a> <br /><br />
+<a class="btn btn-info" asp-action="Index"><span class="glyphicon glyphicon-chevron-left"></span> Go Back</a> 
 
 
 @foreach (var todoItem in Model)
 {
-    if(!todoItem.IsCompleted){
+    if(todoItem.IsCompleted){
         <div class="item">
             @*
             <h4>@todoItem.Text</h4> @daysLeft(todoItem.DateCreated, todoItem.DateDue) <br/>
@@ -42,7 +41,7 @@
             @Html.Partial("SingleTodoItem",todoItem)
             
         </div>
-     }
+    }
 }
 
 </body>
