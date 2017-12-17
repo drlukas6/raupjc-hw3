@@ -11,7 +11,7 @@ Basic task manager built using ASP.NET Core (MVC) + EF.Core
 - SQLite Database
 - Time calculations
 
-##What doesn't work:
+###What doesn't work:
 - User Accounts (Possible cause: MacOS + SQLite + Rider(JetBrains))
 
     
