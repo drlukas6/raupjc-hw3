@@ -22,7 +22,12 @@ namespace hw3webapp.Controllers
         // GET: Todo
         public async Task<IActionResult> Index()
         {
-            return View(await _context.TodoItems.ToListAsync());
+            User user = await _context.Users.FirstOrDefaultAsync(u => u.isActive);
+            List<TodoItem> todos = await _context.TodoItems.Where(t => t.UserId == user.userID).ToListAsync();
+            UserAndItems everything = new UserAndItems(user,todos);
+            
+            
+            return View(everything);
         }
 
         // GET: Todo/Details/5
@@ -60,9 +65,10 @@ namespace hw3webapp.Controllers
         {
             if (ModelState.IsValid)
             {
+                User activeUser = await _context.Users.FirstOrDefaultAsync(u => u.isActive);
                 todoItem.Id = Guid.NewGuid();
                 todoItem.DateCreated = DateTime.Now.Date;
-                todoItem.UserId = new Guid();
+                todoItem.UserId = activeUser.userID;
                 _context.Add(todoItem);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -144,7 +150,7 @@ namespace hw3webapp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
-            var todoItem = await _context.TodoItems.SingleOrDefaultAsync(m => m.Id == id);
+            var todoItem = await _context.TodoItems.FirstOrDefaultAsync(m => m.Id == id);
             _context.TodoItems.Remove(todoItem);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
@@ -174,7 +180,12 @@ namespace hw3webapp.Controllers
         
         public async Task<IActionResult> SeeCompleted()
         {
-            return View(await _context.TodoItems.ToListAsync());
+            User user = await _context.Users.FirstOrDefaultAsync(u => u.isActive);
+            List<TodoItem> todos = await _context.TodoItems.Where(t => t.UserId == user.userID).ToListAsync();
+            UserAndItems everything = new UserAndItems(user,todos);
+            
+            
+            return View(everything);
         }
     }
 }

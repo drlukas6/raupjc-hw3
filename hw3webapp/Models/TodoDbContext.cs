@@ -20,7 +20,7 @@ namespace hw3webapp.Models
         }
         
         public DbSet<TodoItem> TodoItems { get; set; }
-        //public DbSet<TodoItemLabel> TodoItemLabels { get; set; }
+        public DbSet<User> Users { get; set; }
         
     }
 }

@@ -9,3 +9,11 @@
 /Users/lukassestic/Desktop/raupjc3/hw3webapp/hw3webapp/obj/Debug/netcoreapp2.0/hw3webapp.dll
 /Users/lukassestic/Desktop/raupjc3/hw3webapp/hw3webapp/obj/Debug/netcoreapp2.0/hw3webapp.pdb
 /Users/lukassestic/Desktop/raupjc3/hw3webapp/hw3webapp/obj/Debug/netcoreapp2.0/hw3webapp.csprojResolveAssemblyReference.cache
+/Users/lukassestic/Library/Mobile Documents/com~apple~CloudDocs/FER/III. Semestar/C#/Zadaće/3.HomeWork/hw3webapp/hw3webapp/bin/Debug/netcoreapp2.0/hw3webapp.dll
+/Users/lukassestic/Library/Mobile Documents/com~apple~CloudDocs/FER/III. Semestar/C#/Zadaće/3.HomeWork/hw3webapp/hw3webapp/bin/Debug/netcoreapp2.0/hw3webapp.pdb
+/Users/lukassestic/Library/Mobile Documents/com~apple~CloudDocs/FER/III. Semestar/C#/Zadaće/3.HomeWork/hw3webapp/hw3webapp/obj/Debug/netcoreapp2.0/hw3webapp.csprojResolveAssemblyReference.cache
+/Users/lukassestic/Library/Mobile Documents/com~apple~CloudDocs/FER/III. Semestar/C#/Zadaće/3.HomeWork/hw3webapp/hw3webapp/obj/Debug/netcoreapp2.0/hw3webapp.csproj.CoreCompileInputs.cache
+/Users/lukassestic/Library/Mobile Documents/com~apple~CloudDocs/FER/III. Semestar/C#/Zadaće/3.HomeWork/hw3webapp/hw3webapp/obj/Debug/netcoreapp2.0/hw3webapp.AssemblyInfoInputs.cache
+/Users/lukassestic/Library/Mobile Documents/com~apple~CloudDocs/FER/III. Semestar/C#/Zadaće/3.HomeWork/hw3webapp/hw3webapp/obj/Debug/netcoreapp2.0/hw3webapp.AssemblyInfo.cs
+/Users/lukassestic/Library/Mobile Documents/com~apple~CloudDocs/FER/III. Semestar/C#/Zadaće/3.HomeWork/hw3webapp/hw3webapp/obj/Debug/netcoreapp2.0/hw3webapp.dll
+/Users/lukassestic/Library/Mobile Documents/com~apple~CloudDocs/FER/III. Semestar/C#/Zadaće/3.HomeWork/hw3webapp/hw3webapp/obj/Debug/netcoreapp2.0/hw3webapp.pdb

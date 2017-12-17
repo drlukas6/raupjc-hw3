@@ -9,6 +9,14 @@
         DateTime dateDueUnpacked = dateDue.GetValueOrDefault();
         if (dateDueUnpacked != null && dateDueUnpacked != default(DateTime))
         {
+            if (dateDueUnpacked.Subtract(dateStart).TotalDays == 0)
+            {
+                return "Danas!";
+            }
+            if (dateDueUnpacked.Subtract(dateStart).TotalDays < 0)
+            {
+                return "Zakasnio si!";
+            }
             return "(Za " + dateDueUnpacked.Subtract(dateStart).TotalDays.ToString() + " dana!)";
         }
         return "";

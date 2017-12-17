@@ -23,4 +23,13 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.1" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Views\Users\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Views\Users\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\Users\**" />
+  </ItemGroup>
 </Project>

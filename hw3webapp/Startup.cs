@@ -46,7 +46,7 @@ namespace hw3webapp
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Todo}/{action=Index}/{id?}");
+                    template: "{controller=User}/{action=Index}/{id?}");
             });
         }
     }

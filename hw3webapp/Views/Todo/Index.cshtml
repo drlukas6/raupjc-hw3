@@ -1,23 +1,13 @@
-@model IEnumerable<hw3webapp.TodoItem>
+@model hw3webapp.Models.UserAndItems
 
 @{
     ViewData["Title"] = "All Your Todos";
 }
 
-@functions
-{
-
-    string daysLeft(DateTime dateStart,DateTime? dateDue)
-    {
-        DateTime dateDueUnpacked = dateDue.GetValueOrDefault();
-        if (dateDueUnpacked != null && dateDueUnpacked != default(DateTime))
-        {
-            return "(Za " + dateDueUnpacked.Subtract(dateStart).TotalDays.ToString() + " dana!)";
-        }
-        return "";
-    }
-    
-
+@{
+    List<TodoItem> allItems = Model.items;
+    string username = Model.user.username;
+    //allItems.Remove(allItems.Last());
 }
 
 <!DOCTYPE html>
@@ -26,13 +16,13 @@
 <head></head>
 <body>
 <span class="bg-inverse text-white"><h2>All Your Todos</h2></span>
-
+<h5>Hello @username!</h5>
 
 <a class="btn btn-primary" asp-action="Create"><span class="glyphicon glyphicon-plus"></span> Create New</a> &nbsp;&nbsp;
 <a class="btn btn-success" asp-action="SeeCompleted"><span class="glyphicon glyphicon-ok"></span> View Completed</a> <br /><br />
 
 
-@foreach (var todoItem in Model)
+@foreach (var todoItem in allItems)
 {
     if(!todoItem.IsCompleted){
         <div class="item">
@@ -44,6 +34,8 @@
         </div>
      }
 }
+
+<a class="btn btn-success" asp-controller="User" asp-action="LogOut"><span class="glyphicon glyphicon-log-out"></span> Log out!</a>
 
 </body>
 </html>

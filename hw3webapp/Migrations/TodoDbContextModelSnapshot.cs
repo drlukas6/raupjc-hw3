@@ -19,6 +19,22 @@ namespace hw3webapp.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.0.1-rtm-125");
 
+            modelBuilder.Entity("hw3webapp.Models.User", b =>
+                {
+                    b.Property<Guid>("userID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<bool>("isActive");
+
+                    b.Property<string>("password");
+
+                    b.Property<string>("username");
+
+                    b.HasKey("userID");
+
+                    b.ToTable("Users");
+                });
+
             modelBuilder.Entity("hw3webapp.TodoItem", b =>
                 {
                     b.Property<Guid>("Id")

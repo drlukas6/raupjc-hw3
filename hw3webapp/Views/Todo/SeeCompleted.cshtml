@@ -1,7 +1,9 @@
-﻿@model IEnumerable<hw3webapp.TodoItem>
+﻿@model hw3webapp.Models.UserAndItems
 
 @{
     ViewData["Title"] = "All Your Todos";
+    List<TodoItem> allItems = Model.items;
+    string username = Model.user.username;
 }
 
 @functions
@@ -26,12 +28,13 @@
 <head></head>
 <body>
 <span class="bg-inverse text-white"><h2>All Your Todos</h2></span>
+<h5>Hello @username!</h5>
 
 
 <a class="btn btn-info" asp-action="Index"><span class="glyphicon glyphicon-chevron-left"></span> Go Back</a> 
 
 
-@foreach (var todoItem in Model)
+@foreach (var todoItem in allItems)
 {
     if(todoItem.IsCompleted){
         <div class="item">

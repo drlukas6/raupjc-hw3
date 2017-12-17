@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/Users/lukassestic/Desktop/raupjc3/hw3webapp/hw3webapp/hw3webapp.csproj",
+    "projectUniqueName": "/Users/lukassestic/Library/Mobile Documents/com~apple~CloudDocs/FER/III. Semestar/C#/Zadaće/3.HomeWork/hw3webapp/hw3webapp/hw3webapp.csproj",
     "projectName": "hw3webapp",
-    "projectPath": "/Users/lukassestic/Desktop/raupjc3/hw3webapp/hw3webapp/hw3webapp.csproj",
-    "outputPath": "/Users/lukassestic/Desktop/raupjc3/hw3webapp/hw3webapp/obj/",
+    "projectPath": "/Users/lukassestic/Library/Mobile Documents/com~apple~CloudDocs/FER/III. Semestar/C#/Zadaće/3.HomeWork/hw3webapp/hw3webapp/hw3webapp.csproj",
+    "outputPath": "/Users/lukassestic/Library/Mobile Documents/com~apple~CloudDocs/FER/III. Semestar/C#/Zadaće/3.HomeWork/hw3webapp/hw3webapp/obj/",
     "projectStyle": "PackageReference",
     "originalTargetFrameworks": [
       "netcoreapp2.0"
