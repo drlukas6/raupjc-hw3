@@ -154,5 +154,15 @@ namespace hw3webapp.Controllers
         {
             return _context.TodoItems.Any(e => e.Id == id);
         }
+
+        public async Task<IActionResult> MarkAsComplete(Guid? id)
+        {
+            var todoItem = await _context.TodoItems.SingleAsync(m => m.Id == id);
+            todoItem.DateCompleted = DateTime.Now;
+            _context.TodoItems.Update(todoItem);
+            await _context.SaveChangesAsync();
+            
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

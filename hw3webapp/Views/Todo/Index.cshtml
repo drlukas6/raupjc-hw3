@@ -4,62 +4,49 @@
     ViewData["Title"] = "All Your Todos";
 }
 
+@functions
+{
+
+    string daysLeft(DateTime dateStart,DateTime? dateDue)
+    {
+        DateTime dateDueUnpacked = dateDue.GetValueOrDefault();
+        if (dateDueUnpacked != null && dateDueUnpacked != default(DateTime))
+        {
+            return "(Za " + dateDueUnpacked.Subtract(dateStart).TotalDays.ToString() + " dana!)";
+        }
+        return "";
+    }
+    
+
+}
+
+<!DOCTYPE html>
+<html>
+
+<head></head>
+<body>
 <h2>All Your Todos</h2>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Create New</a> <br/><br/>
 </p>
 
+@foreach (var todoItem in Model)
+{
+    if(!todoItem.IsCompleted){
+         <div class="item">
+             @todoItem.Text 
+             @daysLeft(todoItem.DateCreated, todoItem.DateDue) <br/>
+             @todoItem.DateCreated.Date.ToString("dd.MM.yyyy.")<br/>
+             <a asp-action="MarkAsComplete" asp-route-id="@todoItem.Id">Mark as complete</a><br/><br/>
+         </div>
+     }
+}
 
-<table class="table">
-    <thead>
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Text)
-        </th>
-        @*
-                <th>
-                    @Html.DisplayNameFor(model => model.DateCompleted)
-                </th> *@
-        <th>
-            @Html.DisplayNameFor(model => model.DateCreated)
-        </th>
-        @*
-                <th>
-                    @Html.DisplayNameFor(model => model.UserId)
-                </th> *@
-        <th>
-            @Html.DisplayNameFor(model => model.DateDue)
-        </th>
-        <th></th>
-    </tr>
-    </thead>
-    <tbody>
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Text)
-            </td>
-            @*
-            <td>
-                @Html.DisplayFor(modelItem => item.DateCompleted)
-            </td> *@
-            <td>
-                @Html.DisplayFor(modelItem => item.DateCreated.Date)
-            </td>
-            @*
-            <td>
-                @Html.DisplayFor(modelItem => item.UserId)
-            </td> *@
-            <td>
-                @Html.DisplayFor(modelItem => item.DateDue)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-    }
-    </tbody>
-</table>
+</body>
+</html>
+
+
+
+
+
