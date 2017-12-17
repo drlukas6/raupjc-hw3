@@ -1,5 +1,5 @@
 # raupjc-hw3
-App development in C# - 3rd homework
+App development with C# - 3rd homework
 
 Basic task manager built using ASP.NET Core (MVC) + EF.Core
 
